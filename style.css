@@ -1,0 +1,35 @@
+/*Untuk setting halaman agar rata dengan layar*/
+.navbar {
+    justify-content: flex-end;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-family: arial;
+    gap: 20px;
+}
+.menu {
+    display: flex;
+    gap: 30px;
+    font-family: arial;
+    justify-content:flex-end
+}
+/* mengatur warna dan efek ketika mouse diarahkan ke link menu */
+.menu a:hover { 
+    transition: 0.3s;
+    text-decoration: underline;
+    color:blue;
+}
+
+.isi-content {
+    border: none;
+    height: 600px;
+    width: 600px;
+    font-family: "algerian", serif;
+    padding: 30px;
+    text-align: left;
+}
+.content-2 {
+    border: none;
+    text-align: left;
+}
