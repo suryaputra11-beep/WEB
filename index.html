@@ -26,14 +26,25 @@
 
         <!--Halaman konten yang dimasukan pada halaman pertama -->
 
-        <div class="isi-content flex flex-col items-center justify-center p-8">
-            <h1 class="font-bold text-3xl text-left"> Selamat datang di Aplikasi Kelompok 3</h1>
-            <p id="typing-text" class="content-2 text-gray-500 font-sans text-xl text-leftm whitespace-pre-line"></p>
-            </p>
-            <button id="tombolKlik" class="bg-blue-500 hover:bg-yellow-500 text-white font-bold py-2 px-8 rounded mt-4">
-            <a href="halaman2.html" class="undeline">Mulai Eksplorasi</a>
-            </button>
-        </div>
+        <div class="isi-content w-full flex flex-col md:flex-row items-start justify-between gap-10 p-8">
+            <div class="w-full md:w-1/2"> <!-- konten sebelah kiri-->
+                <h1 class="font-bold text-3xl text-left"> Selamat datang di Aplikasi Kelompok 3</h1>
+                <p id="typing-text" class="content-2 text-gray-500 font-sans text-xl text-leftm whitespace-pre-line"></p>
+                </p>
+                <p id="source-text" hidden>
+                    Selamat datang di Showcase Visual Kelompok 3. Mempersembahkan aplikasi
+                    sederhana ini sebagai bagian dari proyek
+                    <b>UAS mata kuliah pemrograman web</b>. Silakan klik tombol di bawah
+                    untuk memulai eksplorasi Anda.
+                </p>
+                <button id="tombolKlik" class="bg-blue-500 hover:bg-yellow-500 text-white font-bold py-2 px-8 rounded mt-4">
+                <a href="halaman2.html" class="undeline">Mulai Eksplorasi</a>
+                </button>
+            </div>
+            <div class="w-full md:w-1/2">
+                 <div class="w-full h-64 bg-gray-200 border border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500"></div>
+            </div>
+        </div>       
     </body>
 
     <footer class="footer p-6 text-center bg-gray-200">
