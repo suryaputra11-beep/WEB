@@ -4,13 +4,82 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Aplikasi Kelompok 3</title>
+        <title>Hubungi Kami</title>
 
     <!--Menggunakan tailwinds yang tersedia secara online di tailwindcss dan juga css custom    -->
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <script src="function.js"></script>
+        <style>
+    .contact-container {
+        max-width: 500px;
+        background: #fff;
+        padding: 25px;
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .contact-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: #007BFF;
+        outline: none;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .contact-container {
+            padding: 15px;
+        }
+    }
+</style>
     </head>
         <body>
             <!-- Navigasi bar dalam bentuk link ke laman -->
@@ -23,6 +92,21 @@
                     <a href="halaman4.html" class="text-black">Halaman4</a>
                 </div>
             </nav>
+<div class="contact-container">
+    <h2>Hubungi Kami</h2>
+    <form action="#" method="post">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" placeholder="Nama anda..." required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email Anda..." required>
+
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" placeholder="Tulis pesan..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
         </body>
 
         <footer class="footer p-6 text-center bg-gray-200">
