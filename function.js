@@ -1,10 +1,22 @@
-fetch('header.html')
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById('header').innerHTML = data;
-    });
-
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Memanggil header.html
+    fetch("header.html")
+        .then(res => {
+            if (!res.ok) {
+                throw new Error("Gagal memuat header.html");
+            }
+            return res.text();
+        })
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error header:", error);
+        });
+
+
+    // Typing text
     const elementP1 = document.getElementById("typing-text-1");
     const elementP2 = document.getElementById("typing-text-2");
 
