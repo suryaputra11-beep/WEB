@@ -1,114 +1,162 @@
 <!DOCTYPE html>
 <html lang="id">
-<!-- Judul Aplikasi -->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hubungi Kami</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js"></script>
 
-    <!--Menggunakan tailwinds yang tersedia secara online di tailwindcss dan juga css custom    -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <script src="function.js"></script>
-        <style>
-    .contact-container {
-        max-width: 500px;
-        background: #fff;
-        padding: 25px;
-        margin: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+    <title>Halaman 4 - Kelompok 3</title>
 
-    .contact-container h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333;
-    }
+</head>
 
-    label {
-        display: block;
-        margin-bottom: 6px;
-        font-weight: bold;
-        color: #555;
-    }
+<body>
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 14px;
-        transition: border-color 0.3s;
-    }
+    <!-- Konten -->
+    <main class="container">
+        <div id="header"></div> <!-- pemanggilan header menggunakan JavaScript -->
+        <!-- Daftar Anggota -->
+        <section class="anggota-container">
 
-    input:focus,
-    textarea:focus {
-        border-color: #007BFF;
-        outline: none;
-    }
+            <div class="anggota">
+                <div class="nomor">1</div>
+                <h3>Syahrian Abdul Rizky</h3>
+            </div>
 
-    textarea {
-        resize: vertical;
-        min-height: 100px;
-    }
+            <div class="anggota">
+                <div class="nomor">2</div>
+                <h3>Surya Saputra</h3>
+            </div>
 
-    button {
-        width: 100%;
-        padding: 12px;
-        background: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
+            <div class="anggota">
+                <div class="nomor">3</div>
+                <h3>Fajar Kharisma Utama</h3>
+            </div>
 
-    button:hover {
-        background: #0056b3;
-    }
+            <div class="anggota">
+                <div class="nomor">4</div>
+                <h3>Mujianto</h3>
+            </div>
 
-    /* Responsive */
-    @media (max-width: 600px) {
-        .contact-container {
-            padding: 15px;
-        }
-    }
-</style>
-    </head>
-        <body>
-            <!-- Navigasi bar dalam bentuk link ke laman -->
-            <nav class="navbar p-6 text-xl font-bold">
-                <span class="text-blue-600">Aplikasi Kelompok 3</span>
-                <div class="menu text-lg font-semibold">
-                    <a href="index.html" class="text-black">Beranda</a>
-                    <a href="halaman2.html" class="text-black">Halaman2</a>
-                    <a href="halaman3.html" class="text-black">Halaman3</a>
-                    <a href="halaman4.html" class="text-black">Halaman4</a>
-                </div>
-            </nav>
-<div class="contact-container">
-    <h2>Hubungi Kami</h2>
-    <form action="#" method="post">
-        <label for="name">Nama Lengkap</label>
-        <input type="text" id="name" name="name" placeholder="Nama anda..." required>
+            <div class="anggota">
+                <div class="nomor">5</div>
+                <h3>Fajar Masdhuqi</h3>
+            </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Email Anda..." required>
+        </section>
 
-        <label for="message">Pesan</label>
-        <textarea id="message" name="message" placeholder="Tulis pesan..." required></textarea>
+        <!-- Informasi -->
+        <section class="informasi">
+            <h3>Tentang Kelompok 3</h3>
+            <p>
+                Kelompok 3 terdiri dari lima anggota yang bekerja sama
+                dalam menyelesaikan tugas dan proyek perkuliahan.
+                Setiap anggota memiliki peran dalam proses pengerjaan,
+                mulai dari perencanaan, pembuatan desain, pengembangan,
+                hingga penyelesaian tugas.
+            </p>
+        </section>
+                    <!-- FORM -->
+            <section class="form-container">
 
-        <button type="submit">Send Message</button>
-    </form>
-</div>
-        </body>
+                <h3>Formulir Pengunjung</h3>
 
-        <footer class="footer p-6 text-center bg-gray-200">
-        <p class="text-gray-600">&copy; 2026 Aplikasi Kelompok 3. All rights reserved.</p>
+                <form id="formPengunjung">
+
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text"
+                            id="nama"
+                            name="nama"
+                            placeholder="Masukkan nama lengkap"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Masukkan email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kategori">Kategori</label>
+
+                        <select id="kategori" name="kategori" required>
+                            <option value="">-- Pilih kategori --</option>
+                            <option value="saran">Saran</option>
+                            <option value="kritik">Kritik</option>
+                            <option value="pertanyaan">Pertanyaan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+
+                        <textarea id="pesan"
+                                name="pesan"
+                                rows="5"
+                                placeholder="Tuliskan pesan kamu..."
+                                required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio"
+                                    name="jenis_kelamin"
+                                    value="Laki-laki"
+                                    required>
+                                Laki-laki
+                            </label>
+
+                            <label>
+                                <input type="radio"
+                                    name="jenis_kelamin"
+                                    value="Perempuan">
+                                Perempuan
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"
+                                name="persetujuan"
+                                required>
+                            Saya menyetujui data yang saya masukkan.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-kirim">
+                        Kirim
+                    </button>
+
+                    <button type="reset" class="btn-reset">
+                        Reset
+                    </button>
+
+                </form>
+
+            </section>
+
+        <!-- Tombol kembali -->
+        <div class="kembali">
+            <a href="index.html">← Kembali ke Menu Utama</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kelompok 3 - Website Kelompok</p>
+    </footer>
+
+</body>
 </html>

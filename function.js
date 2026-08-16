@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Memanggil header.html
+    // =========================
+    // MEMANGGIL HEADER
+    // =========================
     fetch("header.html")
         .then(res => {
             if (!res.ok) {
@@ -16,12 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-    // Typing text
+    // =========================
+    // TYPING TEXT
+    // =========================
     const elementP1 = document.getElementById("typing-text-1");
     const elementP2 = document.getElementById("typing-text-2");
 
     const sourceP1 = document.getElementById("source-text-1");
     const sourceP2 = document.getElementById("source-text-2");
+
+    // Kalau elemen typing tidak ada, hentikan bagian typing
+    if (!elementP1 || !elementP2 || !sourceP1 || !sourceP2) {
+        return;
+    }
 
     const htmlTextP1 = sourceP1.innerHTML.trim();
     const plainTextP1 = sourceP1.textContent.trim();
@@ -56,4 +65,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     ketikP1();
+
 });
